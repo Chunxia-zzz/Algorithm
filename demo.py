@@ -1,5 +1,8 @@
 # encoding:UTF-8
 
+from code_question.decorator import metric
+
+
 def partition(arr, low, high):
     i = (low - 1)  # 最小元素索引
     pivot = arr[high]
@@ -16,6 +19,7 @@ def partition(arr, low, high):
 
 
 # 递归
+@metric
 def quickSort(arr, low, high):
     if low < high:
         pi = partition(arr, low, high)

@@ -1,6 +1,6 @@
 # encoding:UTF-8
 
-from code_question.decorator import metric
+from python_grammar.decorator import metric
 
 
 def partition(arr, low, high):

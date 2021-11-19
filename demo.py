@@ -1,16 +1,62 @@
-import os
-from multiprocessing import Process
+"""
+一面 4月6号
+问项目
+问的挺细的
+然后问了微服务相关的？
+服务间的通信 ？ 答：同步rpc 异步 mq
+rpc和http有啥区别
+mq测试点？没有答出来
+服务挂了别的服务怎么知道？
+
+编程题：字符串的各种括号判断是否合法
+
+数据库：
+排序、连接查询，如何建索引、外键建在哪个表
+数据库主从复制如何保证数据一致性？
+
+linux:
+查询关键字出现的次数？
+大文件怎么查询？
+端口占用、权限修改chmod -777 三个7各代表啥？
+
+fiddler抓包
+正向代理、反向代理？
+ca证书，一次请求共有几次加密？
+用例设计
+app抽奖浮层
+app兼容性怎么测？
+反问？
+
+答的不太好，还是希望给个二面的机会 
+  
+
+4月8号二面 有些记不太清楚了
+项目架构
+项目细节
+还是微服务相关的
+为什么使用微服务？
+rpc
+
+编程题
+leetcode 三数之和
+
+智力题
+20匹马，五个赛道，至少需要比赛几次知道前三名
+
+开放题：
+印象深刻的bug？
+遇到困难的事？
+bug开发不承认？
+反问
 
 
-# 子进程要执行的代码
-def run_proc(name):
-    print('Run child process %s (%s)...' % (name, os.getpid()))
 
-
-if __name__ == '__main__':
-    print('Parent process %s.' % os.getpid())
-    p = Process(target=run_proc, args=('test',))
-    print('Child process will start.')
-    p.start()
-    p.join()
-    print('Child process end.')
+4月12号 HR面
+都是常规问题
+离职原因
+面了哪些公司
+有哪些offer
+为什么选择测试
+为什么选择虾皮
+反问
+"""

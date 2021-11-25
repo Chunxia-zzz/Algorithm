@@ -22,5 +22,40 @@
 3.  2 阶 + 1 阶
 
 """
-def climb(int:n):
-    
+# 斐波那契数列：递归
+# def climb(n:int) -> int:
+#     if n == 1 or n == 0:
+#         return 1
+#     return climb(n-1) + climb(n-2)
+
+
+
+#循环，i和j来传递值，K控制循环次数
+# def climb(n:int) -> int:
+#     i,j,k = 0,1,0
+#     while k<n:
+#         i, j = j, i + j
+#         k = k+1
+
+#     return j
+
+
+
+# 记忆化递归，自顶向下
+def climbStairs(self, n: int) -> int:
+    def dfs(i: int, memo) -> int:
+        if i == 0 or i == 1:
+            return 1
+        if memo[i] == -1:
+            memo[i] = dfs(i - 1, memo) + dfs(i - 2, memo)
+        return memo[i]
+
+    # memo: [-1] * (n - 1)
+    # -1 表示没有计算过，最大索引为 n，因此数组大小需要 n + 1
+    return dfs(n, [-1] * (n + 1))
+
+# def climb(n:int) -> int:
+
+
+
+print(climb(10))

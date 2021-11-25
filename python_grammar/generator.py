@@ -9,7 +9,7 @@ L = [x * x for x in range(10)]
 g = (x * x for x in range(10))
 # print(type(g))
 
-#斐波拉契数列（Fibonacci）
+#斐波那契数列（Fibonacci）
 def fib(max):
     n, a, b = 0, 0, 1
     while n < max:

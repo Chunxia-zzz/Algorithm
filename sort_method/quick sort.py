@@ -5,6 +5,8 @@
 2、分割
 3、递归排序子序列
 """
+
+
 # encoding:UTF-8
 
 
@@ -21,7 +23,6 @@ def partition(arr, low, high):
 
     arr[i + 1], arr[high] = arr[high], arr[i + 1]
     return (i + 1)
-
 
 
 def quickSort(arr, low, high):

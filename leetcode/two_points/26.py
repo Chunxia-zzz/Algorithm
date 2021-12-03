@@ -1,29 +1,11 @@
-class Solution:
-    # def removeDuplicates(self, nums: List[int]) -> int:
-    def remove_duplicates(self, nums):
-        if not nums:
-            return 0
-
-        n = len(nums)
-        fast = slow = 1
-        while fast < n:
-            if nums[fast] != nums[fast - 1]:
-                nums[slow] = nums[fast]
-                slow += 1
-            fast += 1
-
-        return slow
-
-
-if __name__ == '__main__':
-    test = Solution().remove_duplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4])
-    print(test)
-
-# 26，删除排序数组中的重复项。
-# 方法：快慢指针
-# 利用条件：有序
-
 """
+删除排序数组中的重复项。
+方法：快慢指针
+利用条件：有序
+
+
+
+
 给你一个有序数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。
 
 不要使用额外的数组空间，你必须在 原地 修改输入数组 并在使用 O(1) 额外空间的条件下完成。
@@ -47,3 +29,27 @@ if __name__ == '__main__':
 nums 已按升序排列
 
 """
+
+class Solution:
+    # def removeDuplicates(self, nums: List[int]) -> int:
+    def remove_duplicates(self, nums):
+        if not nums:
+            return 0
+
+        n = len(nums)
+        fast = slow = 1
+        while fast < n:
+            if nums[fast] != nums[fast - 1]:
+                nums[slow] = nums[fast]
+                slow += 1
+            fast += 1
+
+        return slow
+
+
+if __name__ == '__main__':
+    test = Solution().remove_duplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4])
+    print(test)
+
+
+

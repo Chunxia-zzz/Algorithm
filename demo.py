@@ -30,3 +30,6 @@ bug开发不承认？
 为什么选择虾皮
 反问
 """
+nums = [105,-5,6,3]
+nums.sort()
+print(nums)

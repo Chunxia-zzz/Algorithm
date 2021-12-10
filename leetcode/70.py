@@ -42,12 +42,12 @@
 
 
 # 循环，自底向上迭代。时间复杂度o(n),空间复杂度o(1)
-# def climb(n: int) -> int:
-#     i, j, k = 0, 1, 0
-#     while k < n:
-#         i, j = j, i + j
-#         k = k + 1
-#     return j
+def climb(n: int) -> int:
+    i, j, k = 0, 1, 0
+    while k < n:
+        i, j = j, i + j
+        k = k + 1
+    return j
 
 
 # 记忆化递归，自顶向下
@@ -65,12 +65,12 @@
 
 
 # 自底向上dp。n是正整数，但是真实斐波那契数列是从0开始，所以需要数组长度为n+1
-def climb(n: int) -> int:
-    dp = [0] * (n + 1)
-    dp[1] = dp[2] = 1
-    for i in range(3, n + 1):
-        dp[i] = dp[i - 1] + dp[i - 2]
-    return dp[-1]
+# def climb(n: int) -> int:
+#     dp = [0] * (n + 1)
+#     dp[1] = dp[2] = 1
+#     for i in range(3, n + 1):
+#         dp[i] = dp[i - 1] + dp[i - 2]
+#     return dp[-1]
 
 
 print(climb(10))

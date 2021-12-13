@@ -10,11 +10,14 @@
 输出：7 -> 0 -> 8
 原因：342 + 465 = 807
 """
+
+
 # Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
 
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
@@ -50,5 +53,5 @@ class Solution:
             p = p.next
         if carry_digit:
             p.next = ListNode(carry_digit)
-        
+
         return dummy.next

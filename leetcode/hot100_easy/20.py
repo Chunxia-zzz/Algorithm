@@ -49,7 +49,7 @@ class Solution:
     def isValid(self, n: str) -> bool:
         if len(n) % 2 == 1:
             return False
-        
+
         pairs = {
             ")": "(",
             "]": "[",
@@ -63,8 +63,9 @@ class Solution:
                 stack.pop()
             else:
                 stack.append(i)
-        
+
         return not stack
+
 
 if __name__ == '__main__':
     print(Solution().isValid("()[]{}"))

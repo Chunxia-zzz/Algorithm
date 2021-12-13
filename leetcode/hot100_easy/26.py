@@ -30,6 +30,7 @@ nums 已按升序排列
 
 """
 
+
 class Solution:
     # def removeDuplicates(self, nums: List[int]) -> int:
     def remove_duplicates(self, nums):
@@ -50,6 +51,3 @@ class Solution:
 if __name__ == '__main__':
     test = Solution().remove_duplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4])
     print(test)
-
-
-

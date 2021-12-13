@@ -1,5 +1,5 @@
 import os
-from multiprocessing import process
+from multiprocessing import Process
 
 
 # 子进程要执行的代码

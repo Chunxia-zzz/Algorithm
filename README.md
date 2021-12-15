@@ -1,37 +1,25 @@
 # Algorithm
 
 #### 介绍
-Algorithm code
+Algorithm这个仓库记录了春夏的数据结构与算法学习过程
 
 #### 软件架构
-软件架构说明
+1、code_question记录了面试可能会遇到的场景题，一般由面经整理而来
+2、data存放了一些场景题需要用到的文件，比如.xlsx文件，json文件等等
+3、leetcode文件夹记录了刷leetcode题目的过程（常规题居多）
+4、sort_method记录了常见排序算法的python实现，比如快排，归并等
+5、python_grammar记录了python常见的特性，比如：迭代器，装饰器，列表生成式等。遗忘这些特性时可以进行参考
 
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  想要快速刷题提高的同学可以clone仓库，并阅读leetcode目录下的刷题记录
+2.  想要了解python基础特性的同学建议阅读python_grammar目录下的内容
 
 #### 参与贡献
+暂不接受参与贡献仓库
 
 1.  Fork 本仓库
 2.  新建 Feat_xxx 分支
 3.  提交代码
 4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)

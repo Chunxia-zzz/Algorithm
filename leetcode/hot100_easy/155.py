@@ -34,6 +34,8 @@ minStack.getMin();   --> 返回 -2.
 
 pop、top 和 getMin 操作总是在 非空栈 上调用。
 """
+
+
 class MinStack:
     def __init__(self):
         self.stack = []
@@ -52,8 +54,6 @@ class MinStack:
 
     def getMin(self) -> int:
         return self.min_stack[-1]
-
-
 
 # Your MinStack object will be instantiated and called as such:
 # obj = MinStack()

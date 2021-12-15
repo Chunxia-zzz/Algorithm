@@ -41,6 +41,8 @@
 
 进阶: 递归算法很简单，你可以通过迭代算法完成吗？
 """
+
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -55,18 +57,21 @@ class TreeNode:
         self.left = None
         self.right = None
 
+
 class Solution:
     def inorderTraversal(self, root: TreeNode):
         res = []
+
         def helper(root):
             if not root:
-                return 
+                return
             helper(root.left)
             res.append(root.val)
             helper(root.right)
+
         helper(root)
         return res
 
 
 if __name__ == '__main__':
-    print(Solution().inorderTraversal([1,None,2,3]))
+    pass

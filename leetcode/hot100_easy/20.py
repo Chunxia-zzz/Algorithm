@@ -43,7 +43,9 @@
 1 <= s.length <= 104
 s 仅由括号 '()[]{}' 组成
 """
-#评论题解
+
+
+# 评论题解
 # class Solution:
 #     def isValid(self, s):
 #         while '{}' in s or '()' in s or '[]' in s:
@@ -57,7 +59,7 @@ class Solution:
     def isValid(self, s: str) -> bool:
         if len(s) % 2 == 1:
             return False
-        
+
         pairs = {
             ")": "(",
             "]": "[",
@@ -71,7 +73,7 @@ class Solution:
                 stack.pop()
             else:
                 stack.append(ch)
-        
+
         return not stack
 
 

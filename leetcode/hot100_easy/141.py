@@ -47,6 +47,7 @@ pos 为 -1 或者链表中的一个 有效索引 。
 
 """
 
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, x):
@@ -69,7 +70,7 @@ class Solution:
 #     def hasCycle(self, head: ListNode) -> bool:
 #         if not head or not head.next:
 #             return False
-        
+
 #         slow = head
 #         fast = head.next
 
@@ -78,10 +79,9 @@ class Solution:
 #                 return False
 #             slow = slow.next
 #             fast = fast.next.next
-        
+
 #         return True
 
 
 if __name__ == '__main__':
-    print(Solution().hasCycle([3,2,0,-4]))
-
+    pass

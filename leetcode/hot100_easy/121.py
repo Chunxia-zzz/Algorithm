@@ -32,6 +32,8 @@
 1 <= prices.length <= 105
 0 <= prices[i] <= 104
 """
+
+
 # 此方法会超时
 class Solution:
     def maxProfit(self, prices: list) -> int:
@@ -43,4 +45,4 @@ class Solution:
 
 
 if __name__ == '__main__':
-    print(Solution().maxProfit([7,1,5,3,6,4]))
+    print(Solution().maxProfit([7, 1, 5, 3, 6, 4]))

@@ -28,6 +28,8 @@
 -100 <= Node.val <= 100
 l1 和 l2 均按 非递减顺序 排列
 """
+
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, x):
@@ -35,6 +37,7 @@ class ListNode:
         self.next = None
 
 
+# 递归解法
 class Solution():
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
         if l1 is None:
@@ -48,5 +51,6 @@ class Solution():
             l2.next = self.mergeTwoLists(l1, l2.next)
             return l2
 
+
 if __name__ == '__main__':
-    print(Solution().mergeTwoLists([1,2,4], [1,3,4]))
+    pass

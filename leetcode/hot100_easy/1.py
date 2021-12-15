@@ -37,6 +37,8 @@
 只会存在一个有效答案
 进阶：你可以想出一个时间复杂度小于 O(n2) 的算法吗？
 """
+
+
 # 暴力求解
 # class Solution:
 #     def twoSum(self, nums: List[int], target: int) -> List[int]:
@@ -45,11 +47,11 @@
 #             for j in range(i + 1, n):
 #                 if nums[i] + nums[j] == target:
 #                     return [i, j]
-        
+
 #         return []
 
 
-#哈希表
+# 哈希表
 class Solution:
     def twoSum(self, nums: list, target: int) -> list:
         hashtable = dict()
@@ -61,4 +63,4 @@ class Solution:
 
 
 if __name__ == '__main__':
-    print(Solution().twoSum([3,2,4], 6))
+    print(Solution().twoSum([3, 2, 4], 6))

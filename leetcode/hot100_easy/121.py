@@ -1,8 +1,8 @@
 """
 买卖股票的最佳时机
 思路：
-1、暴力
-2、一次遍历
+1、暴力  超时，无法通过
+2、dp
 
 
 
@@ -32,16 +32,15 @@
 1 <= prices.length <= 105
 0 <= prices[i] <= 104
 """
-
-
-# 此方法会超时
 class Solution:
     def maxProfit(self, prices: list) -> int:
-        ans = 0
-        for i in range(len(prices)):
-            for j in range(i + 1, len(prices)):
-                ans = max(ans, prices[j] - prices[i])
-        return ans
+        inf = int(1e9)
+        minprice = inf
+        maxprofit = 0
+        for price in prices:
+            maxprofit = max(price - minprice, maxprofit)
+            minprice = min(price, minprice)
+        return maxprofit
 
 
 if __name__ == '__main__':

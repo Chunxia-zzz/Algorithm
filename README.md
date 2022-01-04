@@ -16,10 +16,3 @@ Algorithm这个仓库记录了春夏的数据结构与算法学习过程
 1.  想要快速刷题提高的同学可以clone仓库，并阅读leetcode目录下的刷题记录
 2.  想要了解python基础特性的同学建议阅读python_grammar目录下的内容
 
-#### 参与贡献
-暂不接受参与贡献仓库
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request

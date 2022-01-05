@@ -27,8 +27,10 @@ linux:
 #     time.sleep(2)
 
 # mysleep2()
-for i in range(5):
-    print(i)
+# for i in range(5):
+#     print(i)
+stack = [0,1,2]
+print( stack[-1])
 
 
 

@@ -1,7 +1,7 @@
 """
 有效的括号
 思路：
-匹配问题,我们一般使用栈
+匹配问题,我们一般使用栈/list
 遍历字符串,我们把左括号压入栈中,当遇到右括号,和栈顶元素比较!
 时间复杂度:O(n)
 空间复杂度:O(n)
@@ -43,17 +43,8 @@
 1 <= s.length <= 104
 s 仅由括号 '()[]{}' 组成
 """
-
-
-# 评论题解
-# class Solution:
-#     def isValid(self, s):
-#         while '{}' in s or '()' in s or '[]' in s:
-#             s = s.replace('{}', '')
-#             s = s.replace('[]', '')
-#             s = s.replace('()', '')
-#         return s == ''
-
+#数据结构栈，其实用到的是python中的list。append方法在列表末尾加元素，pop方法在列表末尾移除元素，
+# list[-1]取的是list最末尾的元素
 
 class Solution:
     def isValid(self, s: str) -> bool:
@@ -66,16 +57,18 @@ class Solution:
             "}": "{",
         }
         stack = list()
-        for ch in s:
-            if ch in pairs:
-                if not stack or stack[-1] != pairs[ch]:
+        for i in s :
+            if i not in pairs:
+                stack.append(i)
+            if i in pairs:
+                if not stack or stack[-1] != pairs[i]:
+                # or not 语法错误，需要将not stack条件放在前面判断
+                # if stack[-1]!=pairs[i] or not stack:
                     return False
-                stack.pop()
-            else:
-                stack.append(ch)
-
-        return not stack
-
+                else:
+                    stack.pop()
+        #not+空列表 = True            
+        return not stack     
 
 if __name__ == '__main__':
     print(Solution().isValid("()[]{}"))

@@ -1,15 +1,10 @@
 """
-linux:
-查询关键字出现的次数？
-大文件怎么查询？
-端口占用、权限修改chmod -777 三个7各代表啥？
 """
 # import time
 
 # class LogTime:
 #     # def __init__(self, use_int):
 #     #     self.use_int = use_int
-
 #     def __call__(self, func):
 #         def _log():
 #             beg = time.time()

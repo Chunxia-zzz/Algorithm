@@ -5,8 +5,14 @@ abABCcDEF
 输出：
 abABCc
 
+切前n位[0:n]
+后len(str)-n位 [n:0]
+切后n位[len(str)-n:0]
+剩余
+
 print(str1[0:n])
 截取字符串，使用思路切片
+
 '''
 while True:
     try:

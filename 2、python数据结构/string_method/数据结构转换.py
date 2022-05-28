@@ -1,20 +1,22 @@
 '''
+字符串转数组
+split方法，他输入一个字符串，返回一个list[str]类型的数组
 把按空格隔开的字符串转换成数组
-畜生，给数组我不行？
-sorted(str)方法输出的是数组
 
 
+sorted方法，给字符串进行排序，然后输出排序后的list[str]类型数组
 '''
-# str1 = "Ihave1nose2hands10fingers"
-# a = sorted(str1)
-# print(a)
-
-
-# a = int(input())
-# list1 = list(map(int, '1 2 5'.split()))
-# print(list1)
+# split方法
 list1  = list('c d a bb e'.split())
 print(list1)
-# list1.sort()
-# print(list1)
-print(' '.join(list1))
+
+
+
+
+
+
+#sorted方法
+str1 = "Ihave1nose2hands10fingers"
+a = sorted(str1)
+print(a)
+

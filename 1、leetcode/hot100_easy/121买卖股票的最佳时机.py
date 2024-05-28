@@ -32,16 +32,14 @@
 1 <= prices.length <= 105
 0 <= prices[i] <= 104
 """
+
+
 class Solution:
     def maxProfit(self, prices: list) -> int:
-        inf = int(1e9)
-        minprice = inf
         maxprofit = 0
-        for price in prices:
-            maxprofit = max(price - minprice, maxprofit)
-            minprice = min(price, minprice)
+        minprices = float('inf')
+        for i in prices:
+            minprices = min(i, minprices)
+            maxprofit = max(maxprofit, i - minprices)
+
         return maxprofit
-
-
-if __name__ == '__main__':
-    print(Solution().maxProfit([7, 1, 5, 3, 6, 4]))

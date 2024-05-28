@@ -53,37 +53,17 @@ for (int i = 0; i < len; i++) {
 nums 已按升序排列
 """
 
+
 class Solution:
-    def removeDuplicates(self, nums: list()) -> int:
-        # if not nums:
-        #     return 0
-        
-        # n = len(nums)
-        # fast = slow = 1
-        # while fast < n:
-        #     if nums[fast] != nums[fast - 1]:
-        #         nums[slow] = nums[fast]
-        #         slow += 1
-        #     fast += 1
-        
-        # return slow
-
-
-        left = 1
-        right = 1
-        n = len(nums)
-        while right < n:
-            if nums[right] != nums[right-1]:
-                tmp = nums[right]
-                nums[left] = tmp
-                left += 1
-                right += 1
-            else:
-                right += 1
-        return left
+    def removeDuplicates(self, nums: list[int]) -> int:
+        slow, fast = 0, 1
+        while fast < len(nums):
+            if nums[fast] != nums[slow]:
+                slow = slow + 1
+                nums[slow] = nums[fast]
+            fast = fast + 1
+        return slow + 1
 
 
 if __name__ == '__main__':
-    print(Solution().removeDuplicates([0,0,1,1,1,2,2,3,3,4]))
-
-
+    print(Solution().removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]))

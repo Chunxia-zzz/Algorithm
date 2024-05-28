@@ -33,44 +33,14 @@
  
 """
 
+
 class Solution:
-    # def merge(self, nums1: list(), m: int, nums2: list(), n: int) -> list():
-    #     """
-    #     Do not return anything, modify nums1 in-place instead.
-    #     """
-    #     i = 0
-    #     while i < n:
-    #         nums1[m] = nums2[i]
-    #         i += 1
-    #         m += 1
-    #     nums1.sort()
-
-    #     return nums1
-
-    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+    def merge(self, nums1: list[int], m: int, nums2: list[int], n: int) -> None:
         """
         Do not return anything, modify nums1 in-place instead.
         """
-        sorted = []
-        i, j = 0, 0
-        while i < m or j < n:
-            if i == m:
-                sorted.append(nums2[j])
-                j += 1
-            elif j == n:
-                sorted.append(nums1[i])
-                i += 1
-            elif nums1[i] < nums2[j]:
-                sorted.append(nums1[i])
-                i += 1
-            else:
-                sorted.append(nums2[j])
-                j += 1
-        nums1[:] = sorted
-
-
-if __name__ == '__main__':
-    print(Solution().merge([1,2,3,0,0,0], 3, [2,5,6], 3))
-
-
-        
+        i = 0
+        while i <= n - 1:
+            nums1[m + i] = nums2[i]
+            i += 1
+        return nums1.sort()

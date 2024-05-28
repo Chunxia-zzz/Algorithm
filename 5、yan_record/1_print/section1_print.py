@@ -12,7 +12,7 @@ print(name)  # 将名字打印出来，既在页面显示出来
 
 print('下面会有一个空行')
 print()  # 输入空行
-print('blank line \nin the middle of string')  # \n表示换行
+print('blank line \nin the 华为机试middle of string')  # \n表示换行
 # 光标移入代码行，然后ctrl+k+c 或者 ctrl+/ 可以注释掉该行代码
 # ctrl+k+u 可以取消注释
 # 在调试区域输入cls是将所有记录删除

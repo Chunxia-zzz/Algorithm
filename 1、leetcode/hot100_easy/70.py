@@ -43,34 +43,10 @@
 
 # 循环，自底向上迭代。时间复杂度o(n),空间复杂度o(1)
 def climb(n: int) -> int:
-    i, j, k = 0, 1, 0
-    while k < n:
-        i, j = j, i + j
-        k = k + 1
-    return j
-
-
-# 记忆化递归，自顶向下
-# def climbStairs(self, n: int) -> int:
-#     def dfs(i: int, memo) -> int:
-#         if i == 0 or i == 1:
-#             return 1
-#         if memo[i] == -1:
-#             memo[i] = dfs(i - 1, memo) + dfs(i - 2, memo)
-#         return memo[i]
-#
-#     # memo: [-1] * (n - 1)
-#     # -1 表示没有计算过，最大索引为 n，因此数组大小需要 n + 1
-#     return dfs(n, [-1] * (n + 1))
-
-
-# 自底向上dp。n是正整数，但是真实斐波那契数列是从0开始，所以需要数组长度为n+1
-# def climb(n: int) -> int:
-#     dp = [0] * (n + 1)
-#     dp[1] = dp[2] = 1
-#     for i in range(3, n + 1):
-#         dp[i] = dp[i - 1] + dp[i - 2]
-#     return dp[-1]
+    a = b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b
 
 
 print(climb(10))

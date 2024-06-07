@@ -43,7 +43,9 @@
 1 <= s.length <= 104
 s 仅由括号 '()[]{}' 组成
 """
-#数据结构栈，其实用到的是python中的list。append方法在列表末尾加元素，pop方法在列表末尾移除元素，
+
+
+# 数据结构栈，其实用到的是python中的list。append方法在列表末尾加元素，pop方法在列表末尾移除元素，
 # list[-1]取的是list最末尾的元素
 
 class Solution:
@@ -57,18 +59,17 @@ class Solution:
             "}": "{",
         }
         stack = list()
-        for i in s :
+        for i in s:
             if i not in pairs:
                 stack.append(i)
             if i in pairs:
                 if not stack or stack[-1] != pairs[i]:
-                # or not 语法错误，需要将not stack条件放在前面判断
-                # if stack[-1]!=pairs[i] or not stack:
                     return False
                 else:
                     stack.pop()
-        #not+空列表 = True            
-        return not stack     
+        # not+空列表 = True
+        return not stack
+
 
 if __name__ == '__main__':
     print(Solution().isValid("()[]{}"))
